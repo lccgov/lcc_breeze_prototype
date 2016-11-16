@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- 4.0
+before_install:
+- npm install -g gulp-cli
+install:
+- npm install
+after_success:
+- chmod +x ./bin/create-release-tag.sh
+- "./bin/create-release-tag.sh"
+branches:
+  except:
+  - "/^v/"
+deploy:
+  provider: heroku
+  app: lcc-prototype-kit
+  on: master
+notifications:
+  email: false
+sudo: false

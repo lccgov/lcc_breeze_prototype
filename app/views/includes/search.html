@@ -1,0 +1,150 @@
+<div id="ctl00_m_g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0">
+	
+
+
+<script type="text/javascript" src="/_layouts/LCC.Breeze.SharePoint/Scripts/App/FixPlaceholderText.js"></script>
+<script type="text/javascript">
+
+    jQuery(document).ready(function () {
+        jQuery("#ctl00_m_g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0_txtStartDate").datepicker({
+            defaultDate: null,
+            dateFormat: "dd/mm/yy",
+            changeMonth: true,
+            minDate: 0,
+            onSelect: function(selected) {
+                jQuery("#ctl00_m_g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0_txtEndDate").datepicker("option", "minDate", selected)
+            }
+        });
+        jQuery("#ctl00_m_g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0_txtEndDate").datepicker({
+            defaultDate: null,
+            dateFormat: "dd/mm/yy",
+            changeMonth: true,
+            minDate: 0,
+            onSelect: function (selected) {
+                jQuery("#ctl00_m_g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0_txtStartDate").datepicker("option", "maxDate", selected)
+            }
+        });        
+        jQuery('.activitySearchHomeHeader a').click(function () {
+            jQuery('.activitySearchHomeContent').slideToggle("slow");
+            jQuery('.activitySearchHomeHeader').toggleClass("active");
+           
+        });
+        
+        jQuery('.rbEvents').click(function () {
+            jQuery(".searchEvents").css('display', 'block');
+            jQuery(".searchVenues").css('display', 'none');
+            jQuery('.rbEvents input:radio').attr('checked', true);
+            jQuery('.rbVenues input:radio').attr('checked', false);
+
+        });
+        jQuery('.rbVenues').click(function () {
+            jQuery(".searchEvents").css('display', 'none');
+            jQuery(".searchVenues").css('display', 'block');
+            jQuery('.rbEvents input:radio').attr('checked', false);
+            jQuery('.rbVenues input:radio').attr('checked', true);
+        });
+        var fixPlaceholderText = new FixPlaceholderText();
+        fixPlaceholderText.fixPlaceholderText();
+    });    
+</script>
+
+<script>
+    jQuery(function () {
+        jQuery(".scroll").on("click", function (e) {
+            e.preventDefault();
+            jQuery("body, html").animate({
+                scrollTop: jQuery(jQuery(this).attr('href')).offset().top
+            }, 600);
+        });
+    });
+</script>
+
+        <div class="activitySearchHome">
+            <div class="activitySearchHomeHeader" id="activitySearchHomeHeader">
+                <a href="#activitySearchHomeHeader" class="scroll">Search for Activities &amp; Venues</a>
+            </div>
+            <div class="activitySearchHomeContent" style="display: none;">
+                <h2>What would you like to do?</h2>
+                <div id="radio">                   
+                    <label>
+                        <input value="rbEvents" name="ctl00$m$g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0$searchtype" id="ctl00_m_g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0_rbEvents" class="rbEvents" checked="checked" type="radio">
+                        <span>Find an <b>activity</b></span>                    
+                        </label>
+                    <label>
+                        <input value="rbVenues" name="ctl00$m$g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0$searchtype" id="ctl00_m_g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0_rbVenues" class="rbVenues" type="radio">
+                        <span>Somewhere <b>to go</b></span>                    
+                        </label>
+                </div>
+                <h3 id="refineSearch">Refine your search <span class="optional">(Optional)</span></h3>
+                <div class="searchEvents">
+                    <select name="ctl00$m$g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0$ddlEventCategories" id="ctl00_m_g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0_ddlEventCategories">
+		<option selected="selected" value="">Choose an activity</option>
+		<option value="Art - crafts/visual">Art - crafts/visual</option>
+		<option value="Bouncy castle/soft play">Bouncy castle/soft play</option>
+		<option value="Breeze Arts Festival">Breeze Arts Festival</option>
+		<option value="Breeze Event">Breeze Event</option>
+		<option value="Cookery / Nutrition">Cookery / Nutrition</option>
+		<option value="Cycling / Biking">Cycling / Biking</option>
+		<option value="Dance">Dance</option>
+		<option value="Digital / Coding">Digital / Coding</option>
+		<option value="Drama / Theatre / Dance">Drama / Theatre / Dance</option>
+		<option value="Exhibitions /Museums/ Heritage">Exhibitions /Museums/ Heritage</option>
+		<option value="Extreme sports">Extreme sports</option>
+		<option value="Festivals">Festivals</option>
+		<option value="Film/Photography">Film/Photography</option>
+		<option value="Graffiti/Urban Art">Graffiti/Urban Art</option>
+		<option value="Job &amp; Skills">Job &amp; Skills</option>
+		<option value="Leisure Centre Holiday Programmes">Leisure Centre Holiday Programmes</option>
+		<option value="Libraries/literature">Libraries/literature</option>
+		<option value="Martial arts">Martial arts</option>
+		<option value="Music">Music</option>
+		<option value="Outdoor Adventure">Outdoor Adventure</option>
+		<option value="Science / Nature / Environment">Science / Nature / Environment</option>
+		<option value="Seasonal Event">Seasonal Event</option>
+		<option value="Sport">Sport</option>
+		<option value="Swimming">Swimming</option>
+		<option value="Trips/Outings">Trips/Outings</option>
+		<option value="Water sports">Water sports</option>
+		<option value="Youth Services">Youth Services</option>
+
+	</select>
+                    <select name="ctl00$m$g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0$ddlAgeRanges" id="ctl00_m_g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0_ddlAgeRanges">
+		<option selected="selected" value="">Choose an age range</option>
+		<option value="11 - 13">11 - 13</option>
+		<option value="14 - 16">14 - 16</option>
+		<option value="17+">17+</option>
+		<option value="4 - 7">4 - 7</option>
+		<option value="8 - 10">8 - 10</option>
+		<option value="Under 3s">Under 3s</option>
+
+	</select>                 
+                    <input name="ctl00$m$g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0$txtEventPostcode" id="ctl00_m_g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0_txtEventPostcode" class="searchAddress" placeholder="Address or Postcode Eg: LS1 1AA" type="text">
+                    <input name="ctl00$m$g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0$txtStartDate" id="ctl00_m_g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0_txtStartDate" class="searchDate hasDatepicker" placeholder="Start Date" readonly="true" type="text">
+                    <input name="ctl00$m$g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0$txtEndDate" id="ctl00_m_g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0_txtEndDate" class="searchDate hasDatepicker" placeholder="End Date" readonly="true" type="text">
+                </div>
+                <div class="searchVenues" style="display:none">
+                    <select name="ctl00$m$g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0$ddlVenueType" id="ctl00_m_g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0_ddlVenueType">
+		<option selected="selected" value="">Choose a venue type</option>
+		<option value="Arts and Entertainment">Arts and Entertainment</option>
+		<option value="Community Centres">Community Centres</option>
+		<option value="Leisure Centres">Leisure Centres</option>
+		<option value="Libraries">Libraries</option>
+		<option value="Museums and Galleries">Museums and Galleries</option>
+		<option value="Parks &amp; Green Space">Parks &amp; Green Space</option>
+		<option value="Schools/Colleges">Schools/Colleges</option>
+		<option value="Skateparks">Skateparks</option>
+		<option value="Sports Coaching Venue">Sports Coaching Venue</option>
+		<option value="Visitor Attractions">Visitor Attractions</option>
+		<option value="Youth Club">Youth Club</option>
+		<option value="Youth Service Mobile Location">Youth Service Mobile Location</option>
+
+	</select>
+                    <input name="ctl00$m$g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0$txtVenuePostcode" id="ctl00_m_g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0_txtVenuePostcode" class="searchAddress" placeholder="Address or Postcode Eg: LS1 1AA" type="text">
+                </div>
+                <div class="searchButton">
+                    <input name="ctl00$m$g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0$btnSubmit" value="Search Now" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$m$g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0$btnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_m_g_9a7c56fe_4ea4_4a74_97b7_51f3fe2cfbb0_btnSubmit" class="searchButtonStyle" type="submit">
+                </div>
+            </div>
+        </div>
+
+</div>
