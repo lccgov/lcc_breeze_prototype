@@ -13,7 +13,7 @@ branches:
   - "/^v/"
 deploy:
   provider: heroku
-  app: lcc-prototype-kit
+  app: lcc-breeze
   on: master
 notifications:
   email: false
