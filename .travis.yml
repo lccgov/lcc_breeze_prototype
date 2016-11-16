@@ -15,6 +15,8 @@ deploy:
   provider: heroku
   app: lcc-breeze
   on: master
+  api_key:
+    secure: trUYA/NqXRay7bf/g5YvgvM/LIPgbwd4GYHShOlqIPjRLZ+4LHXzpCs8ZM0r8oDs7zFrPczU775F7QRJWlRZYzKaYR9jNTYcx8hSLj1OgV0l5Qb/Vt2omuqTnQFii+ZWRtqapZbzy7e0mOTn472Ttu0y6/XGWLTJAvuz+WFx456w6Ajv8hhvRkQ5o2kP7f9+mwK00bQvRjNnrMQKUO+3LBWaEKuVFZ/QfFCbf2gSAwNZwZVqXdO3m+s4i8x6y16mlvQIhHxSWk6ToTEaAZZVGeVs7a0tfyqUA9Ve5CI+FGFKlm871kZaznbysKGrSD9vNlx/RtjE5BkLY3B7ITgLuU/myU5tyQf9apLkwMYeahWGqTjl+xzx3QHkt7ZkuzFzZz0BT/nNOJKQF8uDXuHwxejiJVIOURbY7BIAUsiLfOMen8i2iNCfe6Z/SF5hjssKAgZ92NaaIhbXeHBh/x11y0htsNI7J0civM7gkFC+k7ScycX6AL14tyjWEtd4Fh/C1E/b9BOp3/02vEaSB15Gcc+ch4EqUzqRdQCDf1lyrg36eo3heFVfqsrjVh07Eues/4p614bPbc/P/SnwZ7hH02hXSPa+cxVcBa1DaixUvkulNGKm6+XFl2UKhwIy6gMguaEHsbyyUq1OVCtyQ8zoIgzyn4Y1g4uUWf6Y/EXOdqE=
 notifications:
   email: false
 sudo: false
