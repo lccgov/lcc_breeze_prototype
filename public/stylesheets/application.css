@@ -2798,10 +2798,14 @@ hr.light {
 .main-nav {
   background: transparent;
   margin: 0 0 20px 0; }
+  .main-nav li {
+    margin-right: 5px; }
   .main-nav a {
     background: #3498DB; }
-  .main-nav li li a {
-    background: transparent; }
+  .main-nav li li {
+    margin-right: 0; }
+    .main-nav li li a {
+      background: transparent; }
 
 @media (max-width: 767px) {
   .main-nav {
@@ -3334,56 +3338,6 @@ PLACEHOLDER
 .placeholder {
   color: #aaa; }
 
-/**********
-DATE PICKER
-**********/
-.ui-datepicker {
-  display: none;
-  width: 240px;
-  z-index: 101 !important;
-  background: #fff;
-  padding: 10px; }
-
-.ui-datepicker td a.ui-state-active {
-  color: #fff;
-  font-weight: bold;
-  padding: 5px;
-  background: #3498DB; }
-
-td .ui-state-active {
-  background: #3498DB;
-  border: 1px solid #3498DB; }
-
-.ui-datepicker th {
-  border: 0 none;
-  font-weight: bold;
-  padding: 0.7em 0.3em;
-  text-align: center;
-  color: #3498DB; }
-
-td .ui-state-default {
-  background: none;
-  border: 1px solid #CCCCCC;
-  padding: 0; }
-
-.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover {
-  top: 1px; }
-
-.ui-datepicker .ui-datepicker-prev {
-  background: url(../images/calPrevEvents.png) no-repeat 0 0; }
-
-.ui-datepicker .ui-datepicker-next {
-  background: url(../images/calNextEvents.png) no-repeat 0 0; }
-
-.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover {
-  background-position: 0 -20px; }
-
-.ui-datepicker .ui-datepicker-header {
-  position: relative;
-  padding: .2em 0;
-  background: #fff;
-  border: 0px; }
-
 /*********************
 BLOCK LINKS GALLERY
 *********************/
@@ -3644,3 +3598,6 @@ ERROR PAGE
     margin-top: 0px; } }
 
 /*ERROR END*/
+@media only screen and (max-width: 991px) {
+  .mapToggle a.btn {
+    width: 49.9%; } }
